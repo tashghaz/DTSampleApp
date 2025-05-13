@@ -5,7 +5,7 @@
 ## Features
 
 - **QR Code Onboarding**
-  - Scan a QR code to securely connect with the backend and retrieve credentials
+  - Scan a QR code to connect with the backend and retrieve credentials securely
 - **Chat Interface**
   - Send and receive text & image messages
   - Stream assistant responses in real-time
@@ -13,12 +13,10 @@
 - **Voice Input**
   - Speech-to-text using native iOS Speech framework
 - **Core Data Persistence**
-  - Chat history saved locally and available offline
+  - Chat history is saved locally and is available offline
 - **Settings**
   - Toggle Dark/Light mode
   - Secure logout
-- **Unit Tests**
-  - 80%+ test coverage including mock repository and view model tests
 
 ## Architecture
 
@@ -28,17 +26,6 @@
 - **SwiftUI** for declarative UI
 - **CoreData** for offline persistence
 - **Keychain** for secure credential storage
-
-## Folder Structure
-├── Models
-├── ViewModels
-├── Views
-├── Services
-│   ├── ApolloService
-│   ├── KeychainService
-│   ├── SpeechRecognizerService
-├── graphql/
-│   └── Operations/
 
 ## Setup
 
