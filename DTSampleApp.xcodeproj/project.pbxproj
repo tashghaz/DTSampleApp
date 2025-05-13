@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3629455E2DD15CCC00A78309 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 3629455D2DD15CCC00A78309 /* Apollo */; };
+		362945752DD1611400A78309 /* DTSampleAppAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 362945742DD1611400A78309 /* DTSampleAppAPI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		362945402DD122B200A78309 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3629455E2DD15CCC00A78309 /* Apollo in Frameworks */,
+				362945752DD1611400A78309 /* DTSampleAppAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = DTSampleApp;
 			packageProductDependencies = (
+				3629455D2DD15CCC00A78309 /* Apollo */,
+				362945742DD1611400A78309 /* DTSampleAppAPI */,
 			);
 			productName = DTSampleApp;
 			productReference = 3629452C2DD122AF00A78309 /* DTSampleApp.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 362945232DD122AF00A78309;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3629455C2DD15CCC00A78309 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				362945732DD1611400A78309 /* XCLocalSwiftPackageReference "DTSampleAppAPI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3629452D2DD122AF00A78309 /* Products */;
 			projectDirPath = "";
@@ -397,6 +410,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to scan QR codes for onboardin";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone so you can send messages using your voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to convert your spoken input into text in the chat.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -436,6 +452,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to scan QR codes for onboardin";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone so you can send messages using your voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to convert your spoken input into text in the chat.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -593,6 +612,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		362945732DD1611400A78309 /* XCLocalSwiftPackageReference "DTSampleAppAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = DTSampleAppAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3629455C2DD15CCC00A78309 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3629455D2DD15CCC00A78309 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3629455C2DD15CCC00A78309 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		362945742DD1611400A78309 /* DTSampleAppAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DTSampleAppAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 362945242DD122AF00A78309 /* Project object */;
 }

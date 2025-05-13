@@ -1,0 +1,11 @@
+query GetChats($first: Int!, $offset: Int!) {
+  getChats(first: $first, offset: $offset) {
+    id
+    name
+    createdAt
+    messages {
+      text
+      createdAt
+    }
+  }
+}

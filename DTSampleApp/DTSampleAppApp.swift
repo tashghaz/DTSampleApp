@@ -8,12 +8,15 @@
 import SwiftUI
 
 @main
-struct DTSampleAppApp: App {
+struct DTSampleApp: App {
     let persistenceController = PersistenceController.shared
+
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
